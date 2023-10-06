@@ -35,7 +35,7 @@ pipeline {
         stage('Docker Image push into ECR') {
             steps {
                 script{
-                    docker.withRegistry('https://267767410086.dkr.ecr.ap-southeast-2.amazonaws.com/jenkins-private', 'ecr:ap-southeast-2:aws-credentials') {
+                    docker.withRegistry('https://267767410086.dkr.ecr.ap-southeast-2.amazonaws.com/jenkins_pipeline', 'ecr:ap-southeast-2:aws-credentials') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                     }
@@ -83,7 +83,7 @@ pipeline {
             }
           steps{
               sh ''' #!/bin/bash
-                tag_value=$(curl -L "http://ab5030b49b30a4b2eb5cb2b594dedeb6-1522944986.us-east-1.elb.amazonaws.com/" | grep '267767410086.dkr.ecr.ap-southeast-2.amazonaws.com/jenkins-private:' | awk '{print $1}' | awk -F':' '{print $2}')
+                tag_value=$(curl -L "http://ab5030b49b30a4b2eb5cb2b594dedeb6-1522944986.us-east-1.elb.amazonaws.com/" | grep '267767410086.dkr.ecr.ap-southeast-2.amazonaws.com/jenkins_pipeline:' | awk '{print $1}' | awk -F':' '{print $2}')
                 set -x
                echo tag_value
                echo $TAG_ID
