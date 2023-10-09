@@ -47,7 +47,7 @@ pipeline {
          stage('Updating HELM Charts') { 
              
               environment {
-                HELM_GIT_REPO_URL = "https://github.com/vignesh-vicky-tech/configuration-repos.git"
+                HELM_GIT_REPO_URL = "https://github.com/vignesh-vicky-tech/configuration-repo.git"
                 GIT_REPO_EMAIL = 'vigneshs1711@gmail.com '
                 GIT_REPO_BRANCH = "main"
                 TAG_ID = "${env.BUILD_NUMBER}"
