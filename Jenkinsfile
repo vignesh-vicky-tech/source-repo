@@ -52,7 +52,7 @@ pipeline {
                 GIT_REPO_BRANCH = "main"
                 TAG_ID = "${env.BUILD_NUMBER}"
                 GIT_USER = 'vignesh-vicky-tech'
-                GIT_CREDS = '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'
+                GIT_CREDS = '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'
        
              }
       
