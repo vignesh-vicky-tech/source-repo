@@ -18,7 +18,7 @@ pipeline {
         }
           stage('Junit Test & Security Tests'){
             steps {
-                 echo 'Empty'
+                 echo 'Emppty'
             }
         }
 
