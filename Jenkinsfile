@@ -52,7 +52,6 @@ pipeline {
                 GIT_REPO_BRANCH = "main"
                 TAG_ID = "${env.BUILD_NUMBER}"
                 GIT_USER = 'vignesh-vicky-tech'
-                GIT_PASSWORD = 'vicky@1234567890'
                 GIT_CREDS = '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'
        
              }
